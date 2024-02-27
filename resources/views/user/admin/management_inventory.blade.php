@@ -228,9 +228,9 @@
                 var products = JSON.parse(val.products)
                
                 $.each(products, function (idx, value) { 
-                    product_id += value.product_id + "/"
-                    description += value.description + "/"
-                    qty += value.qty + "/"
+                    product_id += "Product ID : "+ value.product_id + " , "
+                    description += "Desc: "+ value.description + " , "
+                    qty += "Quantity : " + value.qty + " , "
                 });
                 row += "<tr><td>"+ (number++) +"</td> <td>"+val.inventory_number+"</td><td> "+product_id+" </td><td>"+description+"</td><td>"+qty+"</td> <td><button type='button' class='btn btn-sm btn-info' onclick='detailInventory("+val.id+")'> Ubah </button>  </td></tr>"
             });
