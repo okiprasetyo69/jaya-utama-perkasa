@@ -229,8 +229,8 @@
                
                 $.each(products, function (idx, value) { 
                     product_id += "Product ID : "+ value.product_id + " , "
-                    description += "Desc: "+ value.description + " , "
-                    qty += "Quantity : " + value.qty + " , "
+                    description += "Desc Product "+value.product_id+": "+ value.description + " , "
+                    qty += "Quantity Product "+value.product_id+": " + value.qty + " , "
                 });
                 row += "<tr><td>"+ (number++) +"</td> <td>"+val.inventory_number+"</td><td> "+product_id+" </td><td>"+description+"</td><td>"+qty+"</td> <td><button type='button' class='btn btn-sm btn-info' onclick='detailInventory("+val.id+")'> Ubah </button>  </td></tr>"
             });
